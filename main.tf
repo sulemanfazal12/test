@@ -1,0 +1,21 @@
+terraform {
+  cloud {
+    organization = "wolsman"
+    workspaces {
+      name = "devops-proj"
+    }
+  }
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 4.0"
+    }
+  }
+}
+
+# Configure the AWS Provider
+provider "aws" {
+  region     = "us-east-1"
+  access_key = "###########"
+  secret_key = "YYMS+####################+a39b##G"
+}
